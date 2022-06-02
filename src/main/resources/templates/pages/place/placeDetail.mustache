@@ -33,15 +33,15 @@
 
     </div>
     {{#places}}
-    <input id="placesId" type="hidden" value="{{contentSeq}}"/>
+    <input id="placesId" type="hidden" value="{{contentSeq}}" />
     <input id="latitude" type="hidden" value="{{latitude}}" />
     <input id="longitude" type="hidden" value="{{longitude}}" />
 
     <h2 id="title" class="text-center m_txt_title ">{{partName}}</h2>
     <hr>
-    <div class="mx-auto m_mh_md ">
-        <div class="d-flex m_pt_lg align-items-center " style="justify-content: space-evenly; align-items: center ">
-            <div class="col-lg-7 ">
+    <div class="mx-auto m_mh_md">
+        <div class="d-flex m_pt_lg align-items-center " style="align-items: center ">
+            <div class="col-7 ">
                 <div id="demo" class="slide container " style="width: 100%; " data-bs-ride="carousel">
 
                     <!-- The slideshow/carousel -->
@@ -49,7 +49,8 @@
                         {{#imageList}}
 
                         <div class="carousel-item m_mt_lg " data-bs-interval="3000">
-                            <img src="{{imgurl}} " alt="# " class="m_box_img_slide " style="object-fit:cover; height:90%; ">
+                            <img src="{{imgurl}} " alt="# " class="m_box_img_slide "
+                                style="object-fit:cover; height:90%; ">
 
                         </div>
                         {{/imageList}}
@@ -60,32 +61,36 @@
                 </div>
             </div>
 
-            <div class="m_bg_primary col-lg-5 d-flex " style=" border-radius: 25px; padding: 20px; height:530px ">
+            <div class="m_bg_primary col-5 d-flex " style=" border-radius: 25px; padding: 20px; height:530px ">
                 <div style="position: relative ">
                     <!-- 좋아요,즐찾버튼 시작 -->
 
                     <div class="d-flex " style="position: absolute; left: 400px; top: -35px ">
                         {{#placeLikesId}}
-                        <input id="placeLikesId" type="hidden" value="{{placeLikesId}}"/>
-                        <div class="d-flex bg-light text-danger" style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
+                        <input id="placeLikesId" type="hidden" value="{{placeLikesId}}" />
+                        <div class="d-flex bg-light text-danger"
+                            style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
                             <i id="btn-like" class="material-icons ">favorite</i>
                         </div>
                         {{/placeLikesId}}
                         {{^placeLikesId}}
-                        <input id="placeLikesId" type="hidden" value=""/>
-                        <div class="d-flex bg-light " style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
+                        <input id="placeLikesId" type="hidden" value="" />
+                        <div class="d-flex bg-light "
+                            style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
                             <i id="btn-like" class="material-icons ">favorite_border</i>
                         </div>
                         {{/placeLikesId}}
                         {{#favId}}
                         <input id="favId" type="hidden" value="{{favId}}" />
-                        <div class="d-flex bg-light m_ml_sm text-warning" style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
+                        <div class="d-flex bg-light m_ml_sm text-warning"
+                            style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
                             <i id="btn-favorite" class="material-icons ">star</i>
                         </div>
                         {{/favId}}
                         {{^favId}}
                         <input id="favId" type="hidden" value="" />
-                        <div class="d-flex bg-light m_ml_sm " style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="width: 40px; height:40px; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 0px 0px 3px 0px rgb(110, 105, 105) inset ">
                             <i id="btn-favorite" class="material-icons ">star_border</i>
                         </div>
                         {{/favId}}
@@ -115,45 +120,53 @@
                         <div class="m_pl_sm m_font_md ">{{keyword}}</div>
                     </div>
                     {{#option}}
-                    <div class="m_ph_sm d-flex" style="width: 90%; overflow:auto">
+                    <div class="m_ph_sm d-flex" style="width: 500px; overflow:auto">
                         <!-- 여러개인경우 슬라이드?-->
                         {{#bathFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width: 100px;; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width: 100px;; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/shower.png " style="width: 80px; height: 80px; ">
                             <div id="bathFlag " style="font-size: small; ">목욕가능</div>
                         </div>
                         {{/bathFlagShow}} {{#parkingFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/parking.png " style="width: 80px; height: 80px; ">
                             <div id="parkingFlag " style="font-size: small; ">주차</div>
                         </div>
                         {{/parkingFlagShow}} {{#entranceFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/entrancefee.png " style="width: 80px; height: 80px; ">
                             <div id="entranceFlag " style="font-size: small; ">유료</div>
                         </div>
                         {{/entranceFlagShow}} {{#petWeightShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/limitweight.png " style="width: 80px; height: 80px; ">
                             <div id="petWeight " style="font-size: small; ">무게제한</div>
                         </div>
                         {{/petWeightShow}} {{#emergencyFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/emergency.png " style="width: 80px; height: 80px; ">
                             <div id="emergencyFlag " style="font-size: small; ">응급수칙</div>
                         </div>
                         {{/emergencyFlagShow}} {{#provisionFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/inventory.png " style="width: 80px; height: 80px; ">
                             <div id="provisionFlag " style="font-size: small; ">비품제공</div>
                         </div>
                         {{/provisionFlagShow}} {{#inOutFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/outdoor.png " style="width: 80px; height: 80px; ">
                             <div id="inOutFlag " style="font-size: small; ">실외</div>
                         </div>
                         {{/inOutFlagShow}} {{#petFlagShow}}
-                        <div class="d-flex bg-light m_ml_sm " style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
+                        <div class="d-flex bg-light m_ml_sm "
+                            style="flex-direction:column; border-radius: 10px; width:100px; height:100px; justify-content: center; align-items: center; padding:10px ">
                             <img src="/images/petrestaurant.png " style="width: 80px; height: 80px; ">
                             <div id="petFlag " style="font-size: small; ">펫 식당</div>
 
@@ -238,9 +251,9 @@
 
 <script>
     let principalId = $("#principalId").val();
-    
-     // 좋아요
-     let likeRendering = () => {
+
+    // 좋아요
+    let likeRendering = () => {
         $("#btn-like")[0].innerText = 'favorite';
         $("#btn-like").addClass("text-danger");
     }
@@ -252,7 +265,7 @@
 
 
     // 좋아요 요청
-    let like = async() => {
+    let like = async () => {
         let placesId = $("#placesId").val();
         let response = await fetch(`/s/api/places/${placesId}/like`, {
             method: "post"
@@ -265,7 +278,7 @@
     }
 
     // 좋아요 취소 요청
-    let unlike = async() => {
+    let unlike = async () => {
         let placesId = $("#placesId").val();
         let placeLikesId = $("#placeLikesId").val();
         let response = await fetch(`/s/api/places/${placesId}/like/${placeLikesId}`, {
@@ -282,9 +295,9 @@
 
     //  좋아요 버튼 클릭이벤트
     $("#btn-like ").click((event) => {
-        if(principalId == undefined){
+        if (principalId == undefined) {
             alert("로그인이 필요한 서비스입니다");
-            location.href="/login-form";
+            location.href = "/login-form";
             return;
         }
         let status = $("#btn-like")[0].innerText;
@@ -307,7 +320,7 @@
     }
 
     // 즐겨찾기 요청
-    let fav = async() => {
+    let fav = async () => {
         let placesId = $("#placesId").val();
         let response = await fetch(`/s/api/places/${placesId}/fav`, {
             method: "post"
@@ -320,7 +333,7 @@
     }
 
     // 즐겨찾기 취소 요청
-    let unFav = async() => {
+    let unFav = async () => {
         let placesId = $("#placesId").val();
         let favId = $("#favId").val();
         let response = await fetch(`/s/api/places/${placesId}/fav/${favId}`, {
@@ -337,9 +350,9 @@
 
     // 즐겨찾기 버튼 활성화, 비활성화
     $("#btn-favorite").click((event) => {
-        if(principalId == undefined){
+        if (principalId == undefined) {
             alert("로그인이 필요한 서비스입니다");
-            location.href="/login-form";
+            location.href = "/login-form";
             return;
         }
         let status = $("#btn-favorite")[0].innerText;
